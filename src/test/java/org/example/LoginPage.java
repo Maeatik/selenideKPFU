@@ -45,28 +45,28 @@ public class LoginPage
         this.driver = driver;
     }
 
-    @Step("Ввод логина")
+    @Step("Login input")
     public void inputLogin(String login) {
         loginField.sendKeys(login); }
 
-    @Step("Ввод пароля")
+    @Step("Password input")
     public void inputPassword(String password) {
         passwordField.sendKeys(password); }
 
-    @Step("Нажатие на кнопку логина")
+    @Step("login button press")
     public void clickLoginBtn() {
         loginBtn.click();
     }
 
-    @Step("Нажатие на кнопку ввода")
+    @Step("input button press")
     public void clickInputBtn() {
         inputBtn.click();
     }
-    @Step("Нажатие на ЮСП")
+    @Step("usp button click")
     public void clickUspBtn() {
         uspBtn.click();
     }
-    @Step("Нажатие на кнопку обо мне")
+    @Step("about me button click")
     public void clickAboutMeBtn() {
         aboutMeBtn.click();
     }

@@ -39,13 +39,12 @@ public class LoginTest
         $(byXpath("//*[@id=\"eu_enter\"]/input[3]")).click();
 
     }
-
+    @Step("Test downloading document")
     @Test
     public void test2 () throws IOException
     {
         // Cкачиваем заявление из вкладки интернет-приемная
         $(byXpath("//*[@id=\"under-slider-menu\"]/div/a[4]")).click();
-
         $(byXpath("//*[@id=\"under-slider-menu\"]/div/a[8]/span")).click();
         $(byXpath("//*[@id=\"mCSB_1_container\"]/ul/li[1]/a")).click();
         File downloadedFile = $(byXpath("//*[@id=\"tab1\"]/p[2]/a")).download();
@@ -53,7 +52,7 @@ public class LoginTest
         String file = new String(readFileToString(downloadedFile, "Windows-1251").getBytes("Windows-1251"));
         Assert.assertTrue(file.contains("09-951"));
     }
-
+    @Step("Test upload my photo to mine LK")
     @Test
     public void test3 () throws IOException
     {
